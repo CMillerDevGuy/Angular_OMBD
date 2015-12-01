@@ -1,6 +1,6 @@
 <div class="single-center"><h1>{{result.data.Title}}</h1></div>
 <img class="image" ng-src="{{result.data.Poster}}">
-<div><button class="center-me" ng-click="addMovie()">Add to your list</button></div>
+<div><button ui-sref="list" class="center-me" ng-click="addMovie()">Add to your list</button></div>
 <div class="single-center"><h3>Year(s) shown:</h3><p>{{result.data.Year}}</p></div>
 <div class="single-center"><h3>Rating:</h3><p>{{result.data.Rated}}</p></div>
 <div class="single-center"><h3>Genre:</h3><p>{{result.data.Genre}}</p></div>
