@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Angular OMDB Project</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
         <script src="js/app.js"></script>
@@ -10,12 +12,18 @@
         <script src="js/controllers/searchCtrl.js"></script>
         <script src="js/controllers/viewCtrl.js"></script>
         <script src="js/factories/movieFactory.js"></script>
-        
-        
     </head>
     <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <li><a ui-sref="search">Search</a></li>
+                <li><a ui-sref="search">List</a></li>
+            </div>
+        </nav>
         <div id="angular" ng-app="mainModule">
             <ui-view></ui-view>
+            <button ui-sref="search">Go To Search</button>
+            <button ui-sref="list">Go To List</button>
         </div>
     </body>
 </html>

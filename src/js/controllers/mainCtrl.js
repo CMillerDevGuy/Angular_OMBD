@@ -1,4 +1,4 @@
-angular.module('mainModule').controller('mainCtrl',['$scope', 'movieFactory', 'result', function($scope, movieFactory, result){
+angular.module('mainModule').controller('mainCtrl',['$scope', 'movieFactory', function($scope, movieFactory){
     
-    $scope.result = result;
+    $scope.welcomeMsg = "You are on the list page";
 }])

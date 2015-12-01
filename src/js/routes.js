@@ -7,18 +7,6 @@ angular.module('mainModule').config(['$stateProvider','$urlRouterProvider', func
         url: '/list',
         templateUrl: 'templates/list.tpl.html',
         controller: 'mainCtrl'
-       /* resolve: {
-            result : function(movieFactory) {
-                return movieFactory.movieGET().then(
-                    function(success) {
-                        return success;
-                    },
-                    function(error){
-                        return error;
-                    }
-                )
-            }
-        }*/
     })
     .state('search',{
         url: '/search',
