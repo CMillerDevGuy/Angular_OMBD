@@ -1,19 +1,16 @@
 <div>
-    <input ng-model="movieSearch" type="search"/>
-    <!--<p>{{movieSearch}}</p>-->
+    <div class="input-group search-bar">
+        <input type="text" ng-model="movieSearch" class="form-control input" placeholder="Enter movie name" autofocus />
+        <span class="input-group-addon bar-style">
+            <i ng-click="search(movieSearch)" class="glyphicon glyphicon-search"></i>
+        </span>
+    </div>
 </div>
-    <button type="submit"  ng-click="search(movieSearch)">Search</button>
-<p>{{result}}</p>
-<p>Title: {{result.data.Title}}</p>
-<p>Year(s) shown: {{result.data.Year}}</p>
-<p>Rating: {{result.data.Rated}}</p>
-<p>Genre: {{result.data.Genre}}</p>
-<p>Actors: {{result.data.Actors}}</p>
-<p>Plot: {{result.data.Plot}}</p>
-<p>Language: {{result.data.Language}}</p>
-<p>Awards: {{result.data.Awards}}</p>
-<div> 
-    <!--<button ui-sref="search">Go To Search</button>
-    <button ui-sref="list">Go To List</button>  
-    <button ui-sref="view">Go To View</button>-->
+<div ng-repeat="search in result.data.Search">
+    <div class = "col-md-4">
+        <a ui-sref="view({id:search.imdbID})" ng-model="search.Title"><h3 class = "searchResult">{{search.Title}}</h3>
+        <img class = "multiPoster" ng-src="{{search.Poster}}"></a>
+    </div>
 </div>
+
+

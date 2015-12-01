@@ -1,8 +1,11 @@
-<p>Title: {{result.data.Title}}</p>
-<p>Year(s) shown: {{result.data.Year}}</p>
-<p>Rating: {{result.data.Rated}}</p>
-<p>Genre: {{result.data.Genre}}</p>
-<p>Actors: {{result.data.Actors}}</p>
-<p>Plot: {{result.data.Plot}}</p>
-<p>Language: {{result.data.Language}}</p>
-<p>Awards: {{result.data.Awards}}</p>
+<div class="single-center"><h1>{{result.data.Title}}</h1></div>
+<img class="image" ng-src="{{result.data.Poster}}">
+<div><button class="center-me" ng-click="addMovie()">Add to your list</button></div>
+<div class="single-center"><h3>Year(s) shown:</h3><p>{{result.data.Year}}</p></div>
+<div class="single-center"><h3>Rating:</h3><p>{{result.data.Rated}}</p></div>
+<div class="single-center"><h3>Genre:</h3><p>{{result.data.Genre}}</p></div>
+<div class="single-center"><h3>Actors:</h3><p>{{result.data.Actors}}</p></div>
+<div class="single-center"><h3>Plot:</h3><p>{{result.data.Plot}}</p></div>
+<div class="single-center"><h3>Language:</h3><p>{{result.data.Language}}</p></div>
+<div class="single-center"><h3>Awards:</h3><p>{{result.data.Awards}}</p></div>
+

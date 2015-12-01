@@ -13,4 +13,14 @@ angular.module('mainModule').controller('searchCtrl',['$scope', 'movieFactory', 
             }
         );
     };
+    $scope.singleSearch = function(single){
+        movieFactory.singleGET(single).then(
+            function(success){
+                $scope.singleResult = success;
+            },
+            function(error){
+                $scope.singleResult = error;
+            }
+        );
+    };
 }])

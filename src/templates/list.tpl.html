@@ -1,4 +1,7 @@
-<div>{{welcomeMsg}}</div>
-<!--<button ui-sref="search">Go To Search</button>
-<button ui-sref="list">Go To List</button>
-<button ui-sref="view">Go To View</button>-->
+<h1 class="head-center">Your Movies</h1>
+<div ng-repeat = "data in result">
+    <div class = "col-md-4">
+        <a ui-sref="view({id:data.data.imdbID})"><h3 class = "searchResult">{{data.data.Title}}</h3>
+        <img class = "multiPoster" ng-src="{{data.data.Poster}}"></a>
+</div>
+</div>

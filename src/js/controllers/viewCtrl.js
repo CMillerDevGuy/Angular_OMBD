@@ -1,15 +1,10 @@
-angular.module('mainModule').controller('viewCtrl',['$scope', 'movieFactory', function($scope, movieFactory){
+angular.module('mainModule').controller('viewCtrl',['$scope', 'movieFactory', 'moreInfo', function($scope, movieFactory, moreInfo){
     
     $scope.welcomeMsg = "You're in view";
     
-    $scope.search = function (movieSearch){
-        movieFactory.movieGET(movieSearch).then(
-            function(success) {
-                $scope.result = success;
-            },
-            function(error){
-                $scope.result = error;
-            }
-        );
-    };
+    $scope.result = moreInfo;
+    
+    $scope.addMovie = function(){
+        movieFactory.addMovie(moreInfo);
+    }
 }])

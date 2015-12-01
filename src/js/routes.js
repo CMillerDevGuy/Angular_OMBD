@@ -14,8 +14,13 @@ angular.module('mainModule').config(['$stateProvider','$urlRouterProvider', func
         controller: 'searchCtrl'
     })
     .state('view',{
-        url: '/view',
+        url: '/view/{id}',
         templateUrl: 'templates/view.tpl.html',
-        controller: 'viewCtrl'
+        controller: 'viewCtrl',
+        resolve: {
+            moreInfo: function($stateParams, movieFactory){
+                return movieFactory.getById($stateParams.id);
+            }
+        }
     })
 }])
